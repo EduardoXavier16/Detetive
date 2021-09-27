@@ -1,0 +1,53 @@
+const prompt = require('prompt-sync')();
+
+var suspeito = 0;
+
+var ind1 = prompt("Telefonou para a vítima?");
+
+    if(ind1 === "sim"){suspeito ++}
+    else{suspeito = 0};
+
+var ind2 = prompt("Esteve com a vítima?");
+
+    if(ind2 === "sim"){suspeito ++}
+    else{suspeito = 0};
+
+var ind3 = prompt("Mora perto da vítima?");
+
+    if(ind3 === "sim"){suspeito ++}
+    else{suspeito = 0};
+
+var ind4 = prompt("Devia para a vítima?");
+
+    if(ind4 === "sim"){suspeito ++}
+    else{suspeito = 0};
+
+var ind5 = prompt("Já trabalhou com a vítima?");
+
+    if(ind5 === "sim"){suspeito ++}
+    else{suspeito = 0};
+
+console.log(suspeito);
+
+if (suspeito <2){
+    
+    console.log("Inocente!");
+
+}
+
+else if (suspeito ==2){
+    
+    console.log("Suspeito!");
+
+}
+
+else if (suspeito >=3 && suspeito <=4){
+    
+    console.log("Cúmplice!");
+
+}
+else if (suspeito == 5){
+    
+    console.log("Assassino!");
+
+}
